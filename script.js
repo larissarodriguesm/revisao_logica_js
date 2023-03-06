@@ -60,16 +60,27 @@
 // printImpar()
 
 //Questão 7 - Dias da semana (Falta ajustar):
-// function mostrarOrdinalDiaSemana(diaSemana) {
+// function mostrarOrdinalDiaSemana(diaSemana){
 //     let diaAjustado = diaSemana.toLowerCase();
 
 //     if (diaAjustado === 'segunda-feira'){
 //         console.log('1º dia da semana');
-//     } else if(diaAjustado === 'terça-feira'){
+//     }else if(diaAjustado === 'terça-feira'){
 //         console.log('2º dia da semana');
+//     }else if(diaAjustado === 'quarta-feira'){
+//         console.log('3º dia da semana');
+//     }else if(diaAjustado === 'quinta-feira'){
+//         console.log('4º dia da semana');
+//     }else if(diaAjustado === 'sexta-feira'){
+//         console.log('5º dia da semana');
+//     }else if(diaAjustado === 'sábado'){
+//         console.log('6º dia da semana');
+//     }else if(diaAjustado === 'domingo'){
+//         console.log('7º dia da semana');
 //     }
 // }
-// mostrarOrdinalDiaSemana('Segunda-FEIRA')
+
+// mostrarOrdinalDiaSemana('SáBaDO')
 
 //Questão 8 - Tabuada de 6:
 // let tabuadaSeis = 6;
@@ -81,4 +92,55 @@
 //   console.log(tabuadaSeis + " x " + i + " = " + resultado);
 // }
 
+// function gerarTabuada(n){
+//     for(let i = 0; i <= 10; i++){
+//         console.log(`${n} x ${i} = ${n*i}`)
+//     }
+// }
+// gerarTabuada(3)
+
 //Questão 9:
+function interagindoArray(){
+    let lista = ['HTML', 'CSS', 'JS', 'MongoDB', 'Express', 'React', 'NodeJs']
+
+    //imprimir a lista
+    // console.log(lista);
+
+    //adicionar Postgres na última posição
+    lista.push('Postgres')
+    // console.log(lista);
+
+    //adicionar os elementos 'Conceito Web' e 'Conceitos de Rede' no início:
+    lista.unshift('Conceito Web');
+    lista.unshift('Conceitos de Rede');
+
+    //adicionar os elementos 'Conceito Data Analytics' e 'Python' no incício':
+    let listaNova = ['Conceito Data Analytics','Python', ...lista]
+    console.log(listaNova);
+
+    //remover o último elemento
+    lista.pop()
+    console.log(lista)
+
+    //remove o primeiro elemento
+    lista.shift()
+
+    console.log(lista)
+}  
+// interagindoArray()
+
+    function removerElementoList(item){
+        let lista = ['HTML', 'CSS', 'JS', 'MongoDB', 'Express', 'React', 'NodeJs']
+
+        //pegar o index do elemento
+        let index = lista.indexOf(item);
+        // console.log(`Index: ${index}`);
+
+        let elementoRemovido = lista.splice(index, 1);
+        console.log(elementoRemovido)
+        console.log(lista)
+    }
+removerElementoList('JS')
+
+
+//Questão 10
